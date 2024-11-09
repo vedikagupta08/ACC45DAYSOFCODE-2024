@@ -3,19 +3,17 @@ using namespace std;
 
 int main() {
 
-	int t;
+		int t,n,a,b;
 	cin>>t;
-	while(t--)
-	{
-	    int a,b,c;
-	    cin>>a>>b>>c;
-	    int count=0,f=0;
-	    for(int i=2;i<=a;i*=2)
-	    {
-	        count++;
+	while(t--){
+	    cin>>n>>a>>b;
+	    int i=0,j=0,x;
+	    while(n/2!=1){
+	        n=n/2;
+	        i=i+a;
+	        j=j+b;
 	    }
-	    f=count*b+((count-1)*c);
-	    cout<<f<<endl;
+	    cout<<i+j+a<<endl;
 	}
 	return 0;
 }
